@@ -88,6 +88,7 @@ div.text {
 
 .image {
     margin-right: 20px;
+    padding-bottom: 20px;
     align-items: left;
 }
 
@@ -113,23 +114,9 @@ div.right {
     vertical-align: middle;
 }
 
-
-/* Align title and text in the middle on right of image like a wiki */
-.inline-text {
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 20px;
-}
-
-.status-left {
-    text-align: left;
-    margin-left: 200px;
-    margin-top: 5px;
-}
-
 /* Title Image */
 div.title-image {
-    background-image: url("../images/admin-terminal.png");
+    background-image: url("../images/background.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -221,6 +208,7 @@ li a#active:hover:not(#active) {
 
 li a#active {
     background-color: #db00be;
+    cursor: not-allowed;
 }
 li a:hover#active{
     background-color: #ff44e6;
@@ -244,6 +232,7 @@ li.right{
 .dropdown {
   float: left;
   overflow: hidden;
+  cursor: default;
 }
 
 .dropdown .dropbtn {
@@ -285,4 +274,21 @@ li.right{
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+@media (max-width: 897px) {
+    div#mobile {
+        display: block;
+    }
+    div#desktop {
+        display: none;
+    }
+}
+@media (min-width: 898px) {
+    div#mobile {
+        display: none;
+    }
+    div#desktop {
+        display: block;
+    }
 }
