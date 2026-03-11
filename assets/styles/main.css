@@ -1,8 +1,45 @@
+/* 
+Reboot Website CSS Rendering Engine v2.0 
+Copyright (c) Ghosted Alex 2026
+Made under the MIT license
+
+Learn more about the MIT license at https://opensource.org/license/mit
+*/
+
 body {
     background-color: #1c1c1c;
     color: #ffffff;
     font-family: pixel;
     margin: 0px;
+}
+
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: monocraft;
+    margin: 0px;
+    text-align: center;
+}
+
+footer
+div.left {
+    text-align: left;
+}
+
+footer .powered-by {
+    font-size: 0.8em;
+    color: #818181;
+    text-transform: lowercase;
+}
+
+/* Example logic to separate the legal block from the engine brand */
+.legal-text {
+    color: #a0a0a0; /* Dimmer grey for the fine print */
+    font-size: 0.9em;
+}
+
+.engine-brand {
+    color: #ffffff; /* Bright white for the engine name */
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -75,9 +112,26 @@ div.left {
     margin-right: 20px;
 }
 
+div.right {
+    text-align: right;
+    margin-left: 20px;
+}
+
 div.flex {
     display: flex;
     align-items: flex-start;
+}
+
+div.right.flex .text {
+    text-align: right !important;
+    align-items: flex-end;
+    margin-right: 20px;
+    margin-left: 0px;
+}
+
+div.right.flex .image {
+    margin-right: 0px; 
+    margin-left: 20px;
 }
 
 div.text {
@@ -88,12 +142,30 @@ div.text {
 
 .image {
     margin-right: 20px;
-    padding-bottom: 20px;
     align-items: left;
+    border: 5px solid #818181;
+    border-radius: 20px;
 }
 
-div.title, div.desc {
-    text-align: left;
+div.gallery {
+    border: 5px solid #818181;
+    border-radius: 20px;
+    background-color: #050505;
+}
+
+div.gallery
+img {
+    border: 5px solid #4e4e4e;
+    border-radius: 20px;
+    background-color: #1c1c1c;
+}
+
+img.inline {
+    border-radius: 15px;
+}
+
+.inline-required {
+    display: inline-block;
 }
 
 div.title {
@@ -102,6 +174,15 @@ div.title {
 
 div.desc {
     font-family: monocraft;
+}
+
+div.right.flex div.title, 
+div.right.flex div.desc {
+    text-align: right;
+}
+div.left.flex div.title, 
+div.left.flex div.desc {
+    text-align: left;
 }
 
 div.right {
@@ -123,6 +204,12 @@ div.title-image {
     text-align: center;
     width: 100%;
     margin: 0px;
+    padding: 0px;
+}
+
+div.buttons button a {
+    color: #ffffff;
+    text-decoration: none;
 }
 
 nav#navBar{
@@ -138,11 +225,11 @@ nav#navBar{
     text-align: left;
 }
 div.depth-effect{
-    padding: 2px;
+    padding: 0px;
     background-color: #6e0076;
 }
 div.depth-effect-v2{
-    padding: 1inch;
+    padding: 0px;
     background-color: #ad00ad;
 }
 
@@ -186,6 +273,12 @@ ol#navBar{
     top: 0;
     text-align: left;
 }
+
+a {
+    color: #00d4ff;
+    text-decoration: underline;
+}
+
 li {
     float: left;
 }
@@ -277,6 +370,9 @@ li.right{
 }
 
 @media (max-width: 897px) {
+    div#invalid {
+        display: none;
+    }
     div#mobile {
         display: block;
     }
@@ -285,10 +381,24 @@ li.right{
     }
 }
 @media (min-width: 898px) {
+    div#invalid {
+        display: none;
+    }
     div#mobile {
         display: none;
     }
     div#desktop {
         display: block;
+    }
+}
+@media (max-width: 318px) {
+    div#invalid {
+        display: block;
+    }
+    div#mobile, div#desktop {
+        display: none;
+    }
+    footer {
+        display: none;
     }
 }

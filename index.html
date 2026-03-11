@@ -8,15 +8,12 @@
         <link rel="stylesheet" href="assets/styles/main.css">
     </head>
     <body>
-    <div id="mobile">
-        <div class="title-image">
-            <h5>‎</h5>
-            <h1 class="big"><code>Project: Landing</code></h1>
-            <h3>The home for all my Past, Present and Future Projects</h3>
-        <hr class="no_limit">
-        </div> 
+    <div id="invalid">
+        <h1>Sorry!</h1>
+        <h3>The screen is too small for the website the display.</h3>
+        <h3>Please try again on another device</h3>
     </div>
-    <div id="desktop">
+    <div id="mobile">
         <nav id="navBar">
             <ul id="nav_links">
                 <li>
@@ -48,6 +45,55 @@
                         <span>About</span>
                     </a>
                 </li>
+            </ul>
+        </nav>
+        <div class="depth-effect">‎</div>
+        <div class="title-image">
+            <h5>‎</h5>
+            <h1 class="big">
+                <code>Project: Landing</code>
+            </h1>
+            <h3>
+                <code>The home for all my Past, Present and Future Projects</code>
+            </h3>
+            <h5>‎</h5>
+        <hr class="no_limit">
+        </div>
+        <h3>Showing projects that work on your mobile device.</h3>
+        <p>Please use the desktop version of the website to see all projects</p>
+    </div>
+    <div id="desktop">
+        <nav id="navBar">
+            <ul id="nav_links">
+                <li>
+                    <a id="active" href="index.html">
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">Projects &darr;</button>
+                        <div class="dropdown-content">
+                            <a href="past.html" class="clean-link">
+                                <span>Past Projects</span>
+                            </a>
+                            <a href="now.html" class="clean-link">
+                                <span>Released & Actively Updated Projects</span>
+                            </a>
+                            <a href="future.html" class="clean-link">
+                                <span>Future Projects</span>
+                            </a>
+                            <a href="leaks.html" class="clean-link">
+                                <span>Project Leaks</span>
+                            </a>
+                            <div class="depth-effect">‎</div>
+                        </div>
+                    </div>
+                <li class="right">
+                    <a href="about.html">
+                        <span>About</span>
+                    </a>
+                </li>
                 <li class="right">
                     <a href="developer.html">
                         <span>Developer</span>
@@ -58,10 +104,32 @@
         <div class="depth-effect">‎</div>
         <div class="title-image">
             <h5>‎</h5>
-            <h1 class="big"><code>Project: Landing</code></h1>
-            <h3>The home for all my Past, Present and Future Projects</h3>
+            <h1 class="big">
+                <code>Project: Landing</code>
+            </h1>
+            <h3>
+                <code>The home for all my Past, Present and Future Projects</code>
+            </h3>
+            <h5>‎</h5>
         <hr class="no_limit">
         </div>
+        <h3>Fast Travel</h3>
+        <p>Where do you want to go?</p>
+        <div class="buttons">
+            <button>
+                <a href="#new_release">New Release</a>
+            </button>
+            <button>
+                <a href="#new_update">New Update</a>
+            </button>
+            <button>
+                <a href="#now">Released & Actively Updated Projects</a>
+            </button>
+            <button>
+                <a href="#future">Future Projects and Leaks</a>
+            </button>
+        </div>
+        <hr class="no_limit">
         <div class="center">
             <div class="center_content">
                 <div id="new_release">
@@ -93,7 +161,6 @@
                         <div class="left flex">
                             <div class="image">
                                 <img class="inline" src="assets/images/mcje-bgui.png" width="500px" class="left">
-                                <p>REQUIRES MINECRAFT: JAVA EDITION TO USE THE JAVA RESOURCE PACK</p>
                             </div>
                             <div class="text">
                                 <div class="title">
@@ -102,9 +169,22 @@
                                     </h2>
                                 </div>
                                 <div class="desc">
-                                    <h3>It is a resource pack that upgrades the GUI for Minecraft Java Edition! This resource pack is imcompatable with other projects of mine.</h3>
+                                    <h3>It is a resource pack that upgrades the GUI for Minecraft Java Edition! This resource pack is incompatible with other projects of mine.</h3>
+                                    <p>REQUIRES MINECRAFT: JAVA EDITION TO USE THE JAVA RESOURCE PACK</p>
+                                    <a href="https://github.com/Gh053d413x/Better-GUI/releases/latest">
+                                        <button>Download Minecraft Java Resource Pack!</button>
+                                    </a>
                                 </div>
                             </div>
+                        </div>
+                        <br>
+                        <div class="gallery left">
+                            <img src="assets/images/update/mcje-bgui/v1.1/recipe_book_3x3.png" width="375px">
+                            <img src="assets/images/update/mcje-bgui/v1.1/recipe_book.png" width="500px">
+                            <img src="assets/images/update/mcje-bgui/v1.1/recipe_book_1x1.png" width="500px">
+                            <br>
+                            <img src="assets/images/update/mcje-bgui/v1.1/creative_tabs.png" width="500px">
+                            <img src="assets/images/update/mcje-bgui/v1.1/creative_search.png" width="500px">
                         </div>
                     </div>
                 </div>
@@ -113,18 +193,79 @@
                     <h1>
                         <code>Released & Actively Updated Projects</code>
                     </h1>
+                    <h3>These are my recently released and currently updated projects!</h3>
                     <br>
-                    <img src="assets/images/admin-terminal.png">
+                    <div id="admin_terminal">
+                        <div class="left flex">
+                            <div class="image">
+                                <img class="inline" src="assets/images/admin-terminal.png" width="500px" class="left">
+                            </div>
+                            <div class="text">
+                                <div class="title">
+                                    <h2>
+                                        <code>Admin Terminal</code>
+                                    </h2>
+                                <div class="desc">
+                                    <h3>The terminal is an administrative tool working from just basic commands like "about" to complex commands. Use Wisely! Software is free, you can edit and customize and modify it anyway you want.</h3>
+                                    <a href="https://github.com/Gh053d413x/Admin_Terminal/releases/latest">
+                                        <button>Download the Admin Terminal!</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div id="better_gui">
+                        <div class="right flex"> 
+                            <div class="text">
+                                <div class="title">
+                                    <h2><code>Better GUI</code></h2>
+                                </div>
+                                <div class="desc">
+                                    <h3>It is a resource pack that upgrades the GUI for Minecraft Java Edition! This resource pack is incompatible with other projects of mine.</h3>
+                                    <p>REQUIRES MINECRAFT: JAVA EDITION TO USE THE JAVA RESOURCE PACK</p>
+                                    <a href="https://github.com/Gh053d413x/Better-GUI/releases/latest">
+                                        <button>Download Minecraft Java Resource Pack!</button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="image">
+                                <img class="inline" src="assets/images/mcje-bgui.png" width="500px">
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <hr>
                 <div id="future">
                     <h1>
                         <code>Get Ready for NEW PROJECTS!</code>
                     </h1>
+                    <h3>These are leaks, alphas and betas for new future projects!</h3>
+                    <br>
+                </div>
+                <hr>
+                <div id="past">
+                    <h1>
+                        <code>Past Projects</code>
+                    </h1>
+                    <h3>These are projects that are no longer getting updates and have been discontinued.</h3>
                 </div>
             </div>
         </div>
     </div>
         <script src="assets/scripts/main.js"></script>
     </body>
+    <footer>
+        <hr class="no_limit">
+        <br>
+        <h1>© Ghosted Alex 2026</h1>
+        <h3>The website and its components are made/published under the MIT License. <a href="https://opensource.org/license/mit">Learn More</a></h3>
+        <h4>Reboot Website CSS Rendering Engine v2.0, The Reboot Logo, Art, Projects are all made by me.<br>All are under the MIT license</h4>
+        <br>
+        <br>
+        <br>
+        <h1 class="powered-by">Powered by</h1>
+        <h3 class="engine-brand">Reboot Website CSS Rendering Engine</h3>
+        <img src="assets/images/reboot_v2.png" width="500px">
+    </footer>
 </html>
