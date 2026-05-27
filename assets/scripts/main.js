@@ -1,11 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Helper function to hide fields if value is "N/A"
+    // Helper functions to hide fields if value is "N/A"
     const renderValueField = (label, value) => {
         return (value && value !== "") ? `<p><strong>${label}:</strong> ${value}</p>` : "";
     };
 
     const renderCodenameField = (codename) => {
         return (codename && codename !== "") ? `<p>(${codename})</p>` : "";
+    };
+
+    const renderStatusField = (status, color, logo = "") => {
+        if (!status) return "";
+        
+        const logoParam = logo ? `&logo=${logo}` : "";
+        
+        return `<hr class="no_limit">
+        <img class="status" src="https://img.shields.io/badge/${encodeURIComponent(status)}-${color}?${logoParam}" alt="${status}">`;
     };
 
     fetch('assets/data/projects.json')
@@ -15,11 +24,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 
                 console.log(project)
 
-                // Using the helper function to build the description block
+                // Using the helper functions to build the description block
                 const projectHTML = `
                     <div class="left flex" id="${project.id}">
                         <div class="image">
                             <img class="inline" src="${project.img}" width="500px">
+                            ${project.status ? renderStatusField(project.status.text, project.status.color, project.status.logo) : ""}
                         </div>
                         <div class="text">
                             <div class="title">

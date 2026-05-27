@@ -27,6 +27,10 @@ div.left {
     text-align: left;
 }
 
+iframe {
+    overflow: hidden;
+}
+
 footer .powered-by {
     font-size: 0.8em;
     color: #818181;
@@ -45,6 +49,14 @@ footer .powered-by {
 
 h1, h2, h3, h4, h5, h6, p {
     margin: 2.5px;
+}
+
+.status {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    margin-bottom: 13px;
 }
 
 #new_release {
@@ -115,6 +127,9 @@ button:hover {
     align-items: center;
     text-align: center;
     margin-top: 0px;
+}
+
+.center_content {
     margin-left: 5%;
     margin-right: 5%;
 }
@@ -122,7 +137,6 @@ button:hover {
 code {
     background-color: #2d2d2d;
     padding: 5px;
-    border-radius: 5px;
     font-family: press_start;
     color: #ffffff;
     margin-bottom: 5px;
@@ -170,6 +184,7 @@ div.text {
     align-items: left;
     border: 5px solid #818181;
     border-radius: 20px;
+    background-color: #1c1c1c;
 }
 
 #now, #future, #past {
@@ -236,6 +251,7 @@ div.title-image {
     width: 100%;
     margin: 0px;
     padding: 0px;
+    margin-top: 68px;
 }
 
 div.buttons button a {
@@ -243,16 +259,17 @@ div.buttons button a {
     text-decoration: none;
 }
 
-nav#navBar{
+nav#navBar {
     background-color: #a900d3;
-    color:white;
+    color: white;
     width: 100%;
-    margin: 0px;
-    padding: 0px;
     margin: 0;
     padding: 0;
     overflow: hidden;
+    position: fixed;
     top: 0;
+    left: 0;
+    z-index: 1000;
     text-align: left;
 }
 div.depth-effect{
@@ -277,20 +294,6 @@ ul#nav_links{
     top: 0;
     text-align: left;
 }
-nav#navBar.fix-pos{
-    background-color: #8900a5;
-    color:white;
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    top: 0;
-    text-align: left;
-	position: fixed;
-}
 ol#navBar{
     background-color: #8900a5;
     color:white;
@@ -308,6 +311,11 @@ ol#navBar{
 a {
     color: #00d4ff;
     text-decoration: underline;
+}
+
+a.clean {
+    color:rgb(255, 255, 255);
+    text-decoration: none;
 }
 
 li {
@@ -354,50 +362,59 @@ li.right{
 }
 
 .dropdown {
-  float: left;
-  overflow: hidden;
-  cursor: default;
+    float: left;
+    overflow: hidden;
 }
-
+/* position: fixed;
+top: 0;
+left: 0;
+z-index: 1000;
+text-align: left; */
 .dropdown .dropbtn {
-  font-size: 16px;  
-  border: none;
-  outline: none;
-  color: rgb(255, 255, 255);
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: rgb(238, 0, 255);
+    background-color: rgb(238, 0, 255);
 }
 
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #9300ac;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+    display: none;
+    background-color: #9300ac;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    position: fixed;
+    margin-left: 85px;
+    margin-top: 48px;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    text-align: left;
 }
 
 .dropdown-content a {
-  float: none;
-  color: rgb(255, 255, 255);
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
+    float: none;
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
 }
 
 .dropdown-content a:hover {
-  background-color: #ff00f7;
+    background-color: #ff00f7;
 }
 
 .dropdown:hover .dropdown-content {
-  display: block;
+    display: block;
 }
 
 @media (max-width: 897px) {
