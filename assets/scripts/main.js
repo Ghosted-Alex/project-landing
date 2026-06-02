@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const ver_str_label = document.getElementsByClassName("version_label")
 
     ver_str.innerText = version
-    ver_str_label.innerText = version
+    ver_str_label[0].innerText = version
 })
 
 // IFRAME LOGIC
