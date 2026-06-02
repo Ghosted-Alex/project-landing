@@ -7,7 +7,7 @@ console.log(`Currently on Page: ${currentPage}`)
 
 // VERSION LOGIC
 document.addEventListener("DOMContentLoaded", () => {
-    if (currentPage && currentPage === "/index.html"){
+    if (currentPage === "/index.html" || currentPage === "/"){
         // 1. Get the single element
         const ver_str = document.getElementById("version");
         // 2. Get the collection of elements
