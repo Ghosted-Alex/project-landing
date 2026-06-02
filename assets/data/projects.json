@@ -1,6 +1,6 @@
 [
     {
-        "id": "better-gui",
+        "id": "proj-land.better-gui",
         "title": "Better GUI",
         "description": "Better GUI is a resource pack that upgrades the GUI for Minecraft Java Edition!",
         "requirement": "Minecraft Java Edition",
@@ -12,18 +12,18 @@
         "buttonText":"Download Java Resource Pack"
     },
     {
-        "id": "galactic-space-reborn",
+        "id": "proj-land.galactic-space-reborn",
         "title": "Galactic Space Reborn",
         "codename": "Project: Galaxy",
         "description": "Galactic Space Reborn is an endless space shooter where you need to shoot enemies, collect powerups and dodge. You can use a Keyboard. Fight through bosses and enemies to get to the next level. Who can get the most points? ",
         "version": "Dev Build 1.8",
         "link": "https://github.com/Ghosted-Alex/Galactic_Space_Reborn",
         "img": "assets/images/update/gsr/galactic_space_reborn_cover.png",
-        "tags": ["#new_release", "#now", "#future"],
+        "tags": ["#new_release", "#now"],
         "buttonText": "Download Galactic Space Reborn"
     },
     {
-        "id": "admin-terminal",
+        "id": "proj-land.admin-terminal",
         "title": "Admin Terminal",
         "description": "The terminal is an administrative tool working from just basic commands like \"about\" to complex commands. Use Wisely! Software is free, you can edit and customize and modify it anyway you want.",
         "requirement": "Python 3.10+",
@@ -35,7 +35,7 @@
         "discontinue": "7/16/2025"
     },
     {
-        "id": "desire-design",
+        "id": "proj-land.desire-design",
         "title": "Desire Design",
         "description": "Desire Design was a website I made while I was in High School. I discontinued it because the Game Development thing was taking off and I just couldn't find time to update Desire Design",
         "version": "1.16",
@@ -46,7 +46,7 @@
         "discontinue": "06/20/2024"
     },
     {
-        "id": "galactic-space",
+        "id": "proj-land.galactic-space",
         "title": "Galactic Space",
         "description": "Galactic Space is an endless space shooter where you need to shoot enemies, collect powerups and dodge. You can use a Keyboard. Fight through bosses and enemies to get to the next level. Who can get the most points? ",
         "version": "Web Beta 1.8",

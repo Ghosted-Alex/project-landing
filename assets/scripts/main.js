@@ -1,28 +1,93 @@
+// VARUABLES
+const version = "1.5"
+
+var ver_str = document.getElementById("version")
+var ver_str_label = document.getElementsByClassName("version_label")
+
+ver_str.innerText = version
+ver_str_label.innerText = version
+
+const currentPage = window.location.pathname;
+
+console.log(`Currently on Page: ${currentPage}`)
+
+// IFRAME LOGIC
 document.addEventListener("DOMContentLoaded", () => {
-    // Helper functions to hide fields if value is "N/A"
-    const renderValueField = (label, value) => {
-        return (value && value !== "") ? `<p><strong>${label}:</strong> ${value}</p>` : "";
+    const iframe = document.getElementById('footer-iframe');
+
+    const resizeIframe = () => {
+        if (iframe && iframe.contentWindow) {
+            try {
+                // Get the scroll height of the document inside the iframe
+                const newHeight = iframe.contentWindow.document.body.scrollHeight + 'px';
+                iframe.style.height = newHeight;
+            } catch (e) {
+                console.error("Cannot resize iframe due to cross-origin policy:", e);
+            }
+        }
     };
 
-    const renderCodenameField = (codename) => {
-        return (codename && codename !== "") ? `<p>(${codename})</p>` : "";
-    };
-
-    const renderStatusField = (status, color, logo = "") => {
-        if (!status) return "";
+    if (iframe) {
+        // 1. Resize when the iframe finishes loading
+        iframe.addEventListener('load', resizeIframe);
         
-        const logoParam = logo ? `&logo=${logo}` : "";
+        // 2. Resize when the window is resized
+        window.addEventListener('resize', resizeIframe);
         
-        return `<hr class="no_limit">
-        <img class="status" src="https://img.shields.io/badge/${encodeURIComponent(status)}-${color}?${logoParam}" alt="${status}">`;
-    };
+        // 3. (Important) Initial call in case the iframe is cached
+        if (iframe.contentDocument?.readyState === 'complete') {
+            resizeIframe();
+        }
+    }
+});
 
-    fetch('assets/data/projects.json')
+// PROJECTS.JSON LOGIC
+document.addEventListener("DOMContentLoaded", () => {
+    if (currentPage === "/index.html" || currentPage === "/"){
+        // Helper functions to hide fields if value is "N/A"
+        const renderValueField = (label, value) => {
+            return (value && value !== "") ? `<p><strong>${label}:</strong> ${value}</p>` : "";
+        };
+    
+        const renderCodenameField = (codename) => {
+            return (codename && codename !== "") ? `<p>(${codename})</p>` : "";
+        };
+    
+        const renderStatusField = (status, color, logo = "") => {
+            if (!status) return "";
+            
+            const logoParam = logo ? `&logo=${logo}` : "";
+            
+            return `<hr class="no_limit">
+            <img class="status" src="https://img.shields.io/badge/${encodeURIComponent(status)}-${color}?${logoParam}" alt="${status}">`;
+        };
+    
+        fetch('assets/data/projects.json')
         .then(response => response.json())
         .then(data => {
             data.forEach(project => {
-                
                 console.log(project)
+
+                // 1. Check if AT LEAST ONE project has the "#future" tag safely
+                const hasFutureProjects = data.some(project => 
+                    project.tags && project.tags.includes("#future")
+                );
+
+                // 2. If no future projects exist, hide the category element
+                if (!hasFutureProjects) {
+                    const futureElement = document.getElementById("future");
+                    // Change this line:
+                    const futureAjacent = document.getElementsByClassName("future_ajacent")[0]; // Select the first element
+                    
+                    if (futureElement) {
+                        futureElement.style.display = "none";
+                    }
+                    
+                    // Check if the element exists before accessing style
+                    if (futureAjacent) {
+                        futureAjacent.style.display = "none";
+                    }
+                }
 
                 // Using the helper functions to build the description block
                 const projectHTML = `
@@ -63,9 +128,11 @@ document.addEventListener("DOMContentLoaded", () => {
                             targetSection.appendChild(container);
                         }
                         container.insertAdjacentHTML('beforeend', projectHTML);
+                        console.log(`Successfully loaded Project: ${project.title} (pl.${project.id})`)
                     }
                 });
             });
         })
         .catch(err => console.error("Error loading project data:", err));
+    }
 });

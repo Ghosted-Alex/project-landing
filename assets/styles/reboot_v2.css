@@ -31,6 +31,14 @@ iframe {
     overflow: hidden;
 }
 
+footer {
+    overflow: hidden;
+}
+
+.footer {
+    overflow-y: hidden;
+}
+
 footer .powered-by {
     font-size: 0.8em;
     color: #818181;
@@ -85,7 +93,6 @@ h1, h2, h3, h4, h5, h6, p {
 hr.subsection {
     width: 50%;
     height: 1px;
-    margin: 10px auto;
     background: #000000;
     border-bottom: 1px solid rgb(0, 0, 0);
 }
@@ -93,7 +100,6 @@ hr.subsection {
 hr.no_limit {
     width: 100%;
     height: 1px;
-    margin: 10px auto;
     background: #000000;
     border-bottom: 1px solid rgb(0, 0, 0);
 }
@@ -101,9 +107,9 @@ hr.no_limit {
 hr {
     width: 75%;
     height: 1px;
-    margin: 10px auto;
     background: #434343;
     border-bottom: 1px solid black;
+    margin: 0px;
 }
 
 button {
@@ -127,6 +133,7 @@ button:hover {
     align-items: center;
     text-align: center;
     margin-top: 0px;
+    overflow: hidden;
 }
 
 .center_content {
@@ -241,17 +248,41 @@ div.right {
     vertical-align: middle;
 }
 
-/* Title Image */
 div.title-image {
     background-image: url("../images/background.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    text-align: center;
+
+    /* Modern Layout Control */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Vertically centers the content */
+    align-items: center;
+    /* Horizontally centers the buttons/text */
+
+    min-height: 0px;
+    /* Uses 80% of the viewport height */
     width: 100%;
-    margin: 0px;
-    padding: 0px;
     margin-top: 68px;
+    /* Keeping your offset */
+    padding-top: 20px;
+    /* Adds breathing room instead of <br> */
+    box-sizing: border-box;
+    /* Prevents padding from breaking width */
+}
+
+/* Group your buttons for better control */
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allows buttons to wrap on smaller screens */
+    justify-content: center;
+    gap: 15px;
+    /* Spacing between buttons without <br> */
+    margin-top: 20px;
+    padding-bottom: 15px;
 }
 
 div.buttons button a {
@@ -261,17 +292,48 @@ div.buttons button a {
 
 nav#navBar {
     background-color: #a900d3;
-    color: white;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
     position: fixed;
     top: 0;
     left: 0;
+    width: 100%;
     z-index: 1000;
-    text-align: left;
 }
+/* nav#navBar {
+    display: flex;
+    flex-direction: column;
+    / 1. Change stretch to flex-start to stop children from filling width /
+    align-items: flex-start; 
+    
+    background-color: #a900d3;
+    position: fixed;
+    top: 0;
+    width: 100%;
+} */
+
+ul#nav_links {
+    display: flex;
+    justify-content: space-between;
+    /* 2. Explicitly tell the nav list to fill the width */
+    width: 100%; 
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.version_banner {
+    position: absolute;
+    right: 0px;
+    top: 100%; /* Positions it exactly at the bottom edge of the nav */
+    background-color: #a200d3;
+    padding: 2px 10px;
+    border-radius: 0 0 0px 15px;
+    color: white;
+}
+
+.nav-left, .nav-right {
+    display: flex; /* Makes the LI elements sit horizontally */
+}
+
 div.depth-effect{
     padding: 0px;
     background-color: #6e0076;
@@ -279,33 +341,6 @@ div.depth-effect{
 div.depth-effect-v2{
     padding: 0px;
     background-color: #ad00ad;
-}
-
-ul#nav_links{
-    background-color: #a200d3;
-    color:white;
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    top: 0;
-    text-align: left;
-}
-ol#navBar{
-    background-color: #8900a5;
-    color:white;
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    top: 0;
-    text-align: left;
 }
 
 a {
@@ -345,10 +380,6 @@ li a#active {
 li a:hover#active{
     background-color: #ff44e6;
     cursor: not-allowed;
-}
-
-li.right{
-    float: right;
 }
 
 @font-face {
@@ -417,18 +448,7 @@ text-align: left; */
     display: block;
 }
 
-@media (max-width: 897px) {
-    div#invalid {
-        display: none;
-    }
-    div#mobile {
-        display: block;
-    }
-    div#desktop {
-        display: none;
-    }
-}
-@media (min-width: 898px) {
+@media (min-width: 850px) {
     div#invalid {
         display: none;
     }
@@ -439,11 +459,11 @@ text-align: left; */
         display: block;
     }
 }
-@media (max-width: 318px) {
+@media (max-width: 849px) {
     div#invalid {
         display: block;
     }
-    div#mobile, div#desktop {
+    div#desktop {
         display: none;
     }
     .footer {
@@ -463,4 +483,14 @@ text-align: left; */
 
 .color.green {
     color: #899a39;
+}
+
+#developer {
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+
+.pad {
+    padding-top: 80px;
+    padding-bottom: 10px;
 }

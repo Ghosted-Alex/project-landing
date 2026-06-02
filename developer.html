@@ -10,83 +10,123 @@
 </head>
 <body>
     <div id="invalid">
-        <h1>Sorry!</h1>
-        <h3>This website is not made for screens/windows this small or to be rendered in a sidebar.</h3>
-        <h3>Please visit this site on a bigger screen or increase the size of your browser window or visit the website
-            in a browser</h3>
+        <div class="center">
+            <h1 class="error">Webiste Rendering Error</h1>
+            <hr class="no_limit">
+            <h3>Error: Screen Too Small</h3>
+            <br>
+            <p>Error Message:</p>
+            <h3>This website is not made to render on screens/windows this small or to be rendered in a sidebar.</h3>
+            <br>
+            <details>
+                <summary>Fix It</summary>
+                <h3>Please visit this site on a bigger screen or increase the size of your browser window or Rotate the orientation of your phone/tablet or visit the website in a browser</h3>
+            </details>
+            <br>
+            <h3>This screen prevents visual glitches on the website.</h3>
+        </div>
     </div>
-    <div>
+    <div id="desktop">
         <nav id="navBar">
             <ul id="nav_links">
-                <li>
-                    <a href="index.html">
-                        <span>Home</span>
-                    </a>
-                </li>
-                <li>
-                    <div class="dropdown">
-                        <button class="dropbtn">Projects &darr;</button>
-                        <div class="dropdown-content">
-                            <a href="index.html#past" class="clean-link">
-                                <span>Past Projects</span>
-                            </a>
-                            <a href="index.html#now" class="clean-link">
-                                <span>Released & Actively Updated Projects</span>
-                            </a>
-                            <a href="index.html#future" class="clean-link">
-                                <span>Future Projects and Leaks</span>
-                            </a>
-                            <div class="depth-effect"> </div>
+                <div class="nav-left">
+                    <li>
+                        <a href="index.html">
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">Projects &darr;</button>
+                            <div class="dropdown-content">
+                                <a href="#past" class="clean-link">
+                                    <span>Past Projects</span>
+                                </a>
+                                <a href="#now" class="clean-link">
+                                    <span>Released & Actively Updated Projects</span>
+                                </a>
+                                <a href="#future" class="clean-link">
+                                    <span>Future Projects and Leaks</span>
+                                </a>
+                                <div class="depth-effect"><br></div>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <li class="right">
-                    <a id="active" href="developer.html">
-                        <span>Developer</span>
-                    </a>
-                </li>
-                <li class="right">
-                    <a href="licenses.html">
-                        <span>Licenses</span>
-                    </a>
-                </li>
+                    </li>
+                </div>
+                <div class="nav-right">
+                    <li>
+                        <a id="active" href="developer.html">
+                            <span>Developer</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="update.html">
+                            <span>Updates</span>
+                        </a>
+                    </li>
+                </div>
             </ul>
             <div class="depth-effect"><br></div>
-        </nav>
-    </div>
-    <div class="center">
-        <h1>About the Developer</h1>
-        <div class="left flex" id="${project.id}">
-            <div class="image">
-                <img class="inline" src="assets/images/developer_logo.png" width="250px">
+            <div class="right version_banner">
+                <h3>Version <span id="version">{VERSION_PLACEHOLDER}</span></h3>
             </div>
-            <div class="text">
-                <div class="title">
-                    <h2><code>Ghosted Alex</code></h2>
+        </nav>
+        <div class="center">
+            <h1>About the Developer</h1>
+            <div class="left flex" id="developer">
+                <div class="image">
+                    <img class="inline" src="assets/images/developer_logo.png" width="250px">
                 </div>
-                <div class="desc">
-                    <p>Hello, I am the one and only developer and author of not only <strong>Project: Landing</strong> but all the other projects listed on the website. I have experience in: HTML, CSS, JS, Python and Lua</p>
-                    <br>
-                    <p>I am currently actively laerning C++ and C#, and also finding interest in Rust and Java</p>
-                    <br>
-                    <p>I am a developer who programs games and other software, games like Galactic Space and programs like a CLI</p>
-                    <br>
-                    <p>I have a Github profile where my projects reside, they are all open source, under the MIT License and depending on the project, the Creative Commons Zero Universal license</p>
-                    <br>
-                    <p>I tend to be trying to be transperent, if I am not transperent, it is usually because I am giving either one of two things,</p>
-                    <br>
-                    <p>1. Condensed information of a circomstance</p>
-                    <p>2. It is a leak, made for everyone to solve, usually giving a big hint in the form of a project codename (project: landing) and a description</p>
-                    <br>
-                    <a href="${project.link}">
-                        <button>${project.buttonText || "Download"}</button>
-                    </a>
+                <div class="text">
+                    <div class="title">
+                        <h2><code>Ghosted Alex</code></h2>
+                    </div>
+                    <div class="desc">
+                        <h3>About the Developer</h3>
+                        <p>
+                            I am the sole developer and author of <strong>Project: Landing</strong> and all other 
+                            projects featured on this site. My core stack includes <strong>HTML, CSS, JS, Python, 
+                            and Lua</strong>.
+                            <br>
+                            <br>
+                            I am currently actively learning <strong>C++ and C#</strong>, 
+                            with an emerging interest in <strong>Rust and Java</strong>.
+                        </p>
+                        <p>
+                            My work ranges from game development—such as <em>Galactic Space</em>—to utility 
+                            software like custom CLI tools.
+                            <br>
+                            <br>
+                            You can find all my source code on 
+                            <a rel="noopener noreferrer" href="https://github.com/Ghosted-Alex" target="_blank">GitHub</a> and <a rel="noopener noreferrer" href="https://gitlab.com/Ghosted-Alex" target="_blank">GitLab</a>; all projects are 
+                            open-source and released under the <strong>MIT</strong> and/or 
+                            <strong>Creative Commons Zero</strong> licenses depending on the project.
+                        </p>
+                        <br>
+                        <h3>Transparency Policy</h3>
+                        <p>I value transparency in my development process. If details seem scarce, it is usually for one of two reasons:</p>
+                        <ul>
+                            <li><strong>Condensed Updates:</strong> I am providing a high-level summary of the circumstances.</li>
+                            <li><strong>Community Puzzles:</strong> Sometimes I release "leaks" as puzzles for the community to solve, often hinted at through project codenames and descriptions.</li>
+                        </ul>
+
+                        <button>
+                            <a href="https://github.com/Ghosted-Alex" class="clean">GitHub Profile</a>
+                        </button>
+                        <button>
+                            <a href="https://gitlab.com/Ghosted-Alex" class="clean">GitLab Profile</a>
+                        </button>
+                        <button>
+                            <a href="https://www.youtube.com/@ghostedalex06" class="clean">YouTube Channel</a>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="assets/scripts/main.js"></script>
 </body>
 
-<iframe src="assets/share/footer.html" style="width: 100%; height: 1095px;" frameborder="0"></iframe>
+<iframe id="footer-iframe" src="assets/share/footer.html" style="width: 100%; height: 1095px;" frameborder="0"></iframe>
 
 </html>
