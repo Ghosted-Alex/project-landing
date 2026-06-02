@@ -57,14 +57,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // PROJECTS.JSON LOGIC
 document.addEventListener("DOMContentLoaded", () => {
-    if (currentPage === "/project-landing/index.html" || currentPage === "/project-landing/"){
+    if (currentPage === "/project-landing/index.html" || currentPage === "/project-landing/" || currentPage === "/index.html" || currentPage === "/"){
         // Helper functions to hide fields if value is "N/A"
         const renderValueField = (label, value) => {
             return (value && value !== "") ? `<p><strong>${label}:</strong> ${value}</p>` : "";
         };
     
         const renderCodenameField = (codename) => {
-            return (codename && codename !== "") ? `<p>(${codename})</p>` : "";
+            return (codename && codename !== "") ? `<code>(${codename})</code>` : "";
         };
     
         const renderStatusField = (status, color, logo = "") => {

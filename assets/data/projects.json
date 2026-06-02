@@ -32,7 +32,11 @@
         "img": "assets/images/admin-terminal.png",
         "tags": ["#past"],
         "buttonText": "Download Admin Terminal",
-        "discontinue": "7/16/2025"
+        "discontinue": "7/16/2025",
+        "status": {
+            "text": "Project_Is_No_Longer_Being_Maintained",
+            "color": "red"
+        }
     },
     {
         "id": "proj-land.desire-design",
@@ -43,7 +47,11 @@
         "img": "assets/images/desire_design.png",
         "tags": ["#past"],
         "buttonText": "Visit Website",
-        "discontinue": "06/20/2024"
+        "discontinue": "06/20/2024",
+        "status": {
+            "text": "Project_Is_No_Longer_Being_Maintained",
+            "color": "red"
+        }
     },
     {
         "id": "proj-land.galactic-space",
@@ -54,6 +62,10 @@
         "img": "assets/images/galactic_space.png",
         "tags": ["#past"],
         "buttonText": "Play Game",
-        "discontinue": "12/25/2024"
+        "discontinue": "12/25/2024",
+        "status": {
+            "text": "Project_Is_No_Longer_Being_Maintained",
+            "color": "red"
+        }
     }
 ]
