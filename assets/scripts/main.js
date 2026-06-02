@@ -1,15 +1,18 @@
 // VARUABLES
-const version = "1.5"
-
-var ver_str = document.getElementById("version")
-var ver_str_label = document.getElementsByClassName("version_label")
-
-ver_str.innerText = version
-ver_str_label.innerText = version
+const version = "1.5.1"
 
 const currentPage = window.location.pathname;
 
 console.log(`Currently on Page: ${currentPage}`)
+
+// VERSION LOGIC
+document.addEventListener("DOMContentLoaded", () => {
+    const ver_str = document.getElementById("version")
+    const ver_str_label = document.getElementsByClassName("version_label")
+
+    ver_str.innerText = version
+    ver_str_label.innerText = version
+})
 
 // IFRAME LOGIC
 document.addEventListener("DOMContentLoaded", () => {
