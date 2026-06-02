@@ -7,7 +7,7 @@ console.log(`Currently on Page: ${currentPage}`)
 
 // VERSION LOGIC
 document.addEventListener("DOMContentLoaded", () => {
-    if (currentPage === "/index.html" || currentPage === "/"){
+    if (currentPage === "/project-landing/index.html" || currentPage === "/project-landing/"){
         // 1. Get the single element
         const ver_str = document.getElementById("version");
         // 2. Get the collection of elements
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // PROJECTS.JSON LOGIC
 document.addEventListener("DOMContentLoaded", () => {
-    if (currentPage === "/index.html" || currentPage === "/"){
+    if (currentPage === "/project-landing/index.html" || currentPage === "/project-landing/"){
         // Helper functions to hide fields if value is "N/A"
         const renderValueField = (label, value) => {
             return (value && value !== "") ? `<p><strong>${label}:</strong> ${value}</p>` : "";
