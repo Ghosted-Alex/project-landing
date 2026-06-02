@@ -6,9 +6,12 @@ Codename Project: Landing AND the website name Project: Landing is a brand new w
 
 ### Major Update
 
-- Added developer.html
-- Added licenses.html
-- Added footer.html
-- Modified behaviour of navbar to pin to top
-- Modified content of website to use a new projects.json file
-- Fixed projects dropdown to take you to spacific parts of the website
+- Added Updates Page (This Page)
+- Added Version Banner
+
+- Fixed The Developer Button Bug and Added Github and Gitlab Profiles and My YouTube Channel
+- Changed how the screen_too_small screen looks, now more detatiled
+- Changed how the footer works, now uses a dynamic iframe
+- Navigation bar now uses flexbox to render
+- Changed how categories are displayed (still looks the same but different under the hood)
+- Changed how the footer looks, links are side-by-side now
