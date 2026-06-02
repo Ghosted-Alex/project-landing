@@ -7,22 +7,20 @@ console.log(`Currently on Page: ${currentPage}`)
 
 // VERSION LOGIC
 document.addEventListener("DOMContentLoaded", () => {
-    if (currentPage === "/project-landing/index.html" || currentPage === "/project-landing/"){
-        // 1. Get the single element
-        const ver_str = document.getElementById("version");
-        // 2. Get the collection of elements
-        const ver_str_labels = document.getElementsByClassName("version_label");
-    
-        // 3. Check for the ID element before assigning
-        if (ver_str) {
-            ver_str.innerText = version;
-        }
-    
-        // 4. Loop through the collection if it exists
-        if (ver_str_labels.length > 0) {
-            for (let label of ver_str_labels) {
-                label.innerText = version;
-            }
+    // 1. Get the single element
+    const ver_str = document.getElementById("version");
+    // 2. Get the collection of elements
+    const ver_str_labels = document.getElementsByClassName("version_label");
+
+    // 3. Check for the ID element before assigning
+    if (ver_str) {
+        ver_str.innerText = version;
+    }
+
+    // 4. Loop through the collection if it exists
+    if (ver_str_labels.length > 0) {
+        for (let label of ver_str_labels) {
+            label.innerText = version;
         }
     }
 });
