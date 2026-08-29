@@ -15,7 +15,21 @@ but I fugured out how to replicate and even enhance the layouts and styles of a 
 *Note: Other projects managed by Ghosted Alex are hosted in their own independent repositories and carry their own respective licenses.*
 
 ---
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+---
+
+## WARNING
+
+THIS IS THE BETA BRANCH OF THE PROJECT: LANDING WEBSITE
+
+THERE WILL BE BUGS IN THIS BRANCH AND THINGS MIGHT BREAK
+=======
+>>>>>>> 52614dd (Minor website update on releases)
+
+>>>>>>> 6e11fe2 (Release 1.7)
 ## Updates
 
 ![Update Badge](https://img.shields.io/badge/Version-1.5.1-blue)
