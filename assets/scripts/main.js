@@ -1,5 +1,6 @@
 // VARUABLES
-const version = "1.5.1"
+const version = "1.6.1"
+const update = "Minor"
 
 const currentPage = window.location.pathname;
 
@@ -7,17 +8,18 @@ console.log(`Currently on Page: ${currentPage}`)
 
 // VERSION LOGIC
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Get the single element
-    const ver_str = document.getElementById("version");
-    // 2. Get the collection of elements
-    const ver_str_labels = document.getElementsByClassName("version_label");
 
-    // 3. Check for the ID element before assigning
+    const ver_str = document.querySelectorAll(".version");
+    const upd_str = document.getElementById("update")
+
     if (ver_str) {
-        ver_str.innerText = version;
+        ver_str.forEach(element => {
+            element.textContent = version;
+        });
     }
 
-    // 4. Loop through the collection if it exists
+    upd_str.innerText = update
+
     if (ver_str_labels.length > 0) {
         for (let label of ver_str_labels) {
             label.innerText = version;
@@ -76,38 +78,49 @@ document.addEventListener("DOMContentLoaded", () => {
             <img class="status" src="https://img.shields.io/badge/${encodeURIComponent(status)}-${color}?${logoParam}" alt="${status}">`;
         };
     
+        const renderImage = (image = "", statusActive = false) => {
+            if (!image) return "";
+
+            const imgParam = image ? `&image="${image}"` : "";
+
+            console.log(imgParam)
+
+            if (statusActive == false) return `<img class="inline" src=${imgParam} width="500px">`
+            if (statusActive == true) return `<img class="inline" src=${imgParam} width="500px" style="border-bottom-left-radius: 0px; border-bottom-right-radius: 0px;">`
+        };
+
         fetch('assets/data/projects.json')
         .then(response => response.json())
         .then(data => {
             data.forEach(project => {
                 console.log(project)
 
-                // 1. Check if AT LEAST ONE project has the "#future" tag safely
                 const hasFutureProjects = data.some(project => 
                     project.tags && project.tags.includes("#future")
                 );
 
-                // 2. If no future projects exist, hide the category element
                 if (!hasFutureProjects) {
                     const futureElement = document.getElementById("future");
-                    // Change this line:
-                    const futureAjacent = document.getElementsByClassName("future_ajacent")[0]; // Select the first element
+                    const futureAjacent = document.getElementsByClassName("future_ajacent")[0];
                     
                     if (futureElement) {
-                        futureElement.style.display = "none";
+                        futureElement.innerHTML = `<br>
+                        <h1><code>Get Ready for NEW PROJECTS!</code></h1>
+                        <h3>Future Projects and Leaks</h3>
+                        <hr class="no_limit">
+                        <img class="status" src="https://img.shields.io/badge/There_are_no_future_projects_and_leaks_currently,_please_come_back_later-red" style="width: 750px;">`;
                     }
                     
-                    // Check if the element exists before accessing style
-                    if (futureAjacent) {
-                        futureAjacent.style.display = "none";
-                    }
+                    // if (futureAjacent) {
+                    //     futureAjacent.style.display = "none";
+                    // }
                 }
 
                 // Using the helper functions to build the description block
                 const projectHTML = `
                     <div class="left flex" id="${project.id}">
                         <div class="image">
-                            <img class="inline" src="${project.img}" width="500px">
+                            <img class="project_image ${project.tags} inline" src="${project.img}" width="500px">
                             ${project.status ? renderStatusField(project.status.text, project.status.color, project.status.logo) : ""}
                         </div>
                         <div class="text">

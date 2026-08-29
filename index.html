@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project: Landing</title>
     <link rel="shortcut icon" href="assets/images/icon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="assets/styles/reboot_v2.css">
+    <link rel="stylesheet" href="assets/styles/main.css">
 </head>
 
 <body>
     <div id="invalid">
         <div class="center">
-            <h1 class="error">Webiste Rendering Error</h1>
+            <h1 class="error">Website Rendering Error</h1>
             <hr class="no_limit">
             <h3>Error: Screen Too Small</h3>
             <br>
@@ -32,7 +32,7 @@
             <ul id="nav_links">
                 <div class="nav-left">
                     <li>
-                        <a id="active" href="index.html">
+                        <a id="active">
                             <span>Home</span>
                         </a>
                     </li>
@@ -40,13 +40,13 @@
                         <div class="dropdown">
                             <button class="dropbtn">Projects &darr;</button>
                             <div class="dropdown-content">
-                                <a href="#past" class="clean-link">
+                                <a href="index.html#past" class="clean-link">
                                     <span>Past Projects</span>
                                 </a>
-                                <a href="#now" class="clean-link">
+                                <a href="index.html#now" class="clean-link">
                                     <span>Released & Actively Updated Projects</span>
                                 </a>
-                                <a href="#future" class="future_ajacent clean-link">
+                                <a href="index.html#future" class="future_ajacent clean-link">
                                     <span>Future Projects and Leaks</span>
                                 </a>
                                 <div class="depth-effect"><br></div>
@@ -61,6 +61,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="releases.html">
+                            <span>Releases</span>
+                        </a>
+                    </li>
+                    <li>
                         <a href="update.html">
                             <span>Updates</span>
                         </a>
@@ -69,7 +74,7 @@
             </ul>
             <div class="depth-effect"><br></div>
             <div class="right version_banner">
-                <h3>Version <span id="version">{VERSION_PLACEHOLDER}</span></h3>
+                <h3>Version <span class="version">{VERSION_PLACEHOLDER}</span></h3>
             </div>
         </nav>
         <div class="center">
@@ -81,7 +86,6 @@
             
                 <div class="button-container">
                     <button onclick="window.location.href='developer.html'">About the Developer</button>
-                    <button onclick="window.location.href='licenses.html'">Project Licenses</button>
                     <button onclick="window.location.href='https://www.youtube.com/@ghostedalex06'">Visit YouTube Channel</button>
                 </div>
             
@@ -98,6 +102,11 @@
                     <br>
                     <h1><code>Newest Release</code></h1>
                     <hr class="no_limit">
+                    <h2>Want to see what was released?</h2>
+                    <h2>The Releases page has changed locations</h2>
+                    <a href="releases.html">
+                        <button>Releases</button>
+                    </a>
                     <br>
                 </div>
                 <div id="new_update">

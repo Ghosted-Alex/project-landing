@@ -1,0 +1,10 @@
+# Personal Dev Notes and Checklists
+dev/
+*.todo.txt
+todo.md
+notes/
+.idea/
+
+# Editor configuration folders
+.vscode/
+.vscodium/

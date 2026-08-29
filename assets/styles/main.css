@@ -1,5 +1,5 @@
 /* 
-Reboot Website CSS Rendering Engine v2.0 
+Project: Landing CSS Rendering Engine
 Copyright (c) Ghosted Alex 2026
 Made under the MIT license
 
@@ -94,22 +94,22 @@ h1, h2, h3, h4, h5, h6, p {
 hr.subsection {
     width: 50%;
     height: 1px;
-    background: #000000;
-    border-bottom: 1px solid rgb(0, 0, 0);
+    background: rgb(12, 12, 12);
+    border-bottom: 1px solid rgb(12, 12, 12);
 }
 
 hr.no_limit {
     width: 100%;
     height: 1px;
-    background: #000000;
-    border-bottom: 1px solid rgb(0, 0, 0);
+    background: rgb(12, 12, 12);
+    border-bottom: 1px solid rgb(12, 12, 12);
 }
 
 hr {
     width: 75%;
     height: 1px;
-    background: #434343;
-    border-bottom: 1px solid black;
+    background: rgb(12, 12, 12);
+    border-bottom: 1px solid rgb(12, 12, 12);
     margin: 0px;
 }
 
@@ -193,6 +193,12 @@ div.text {
     border: 5px solid #818181;
     border-radius: 20px;
     background-color: #1c1c1c;
+}
+
+#past
+img.project_image {
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
 }
 
 #now, #future, #past {

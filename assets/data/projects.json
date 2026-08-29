@@ -4,22 +4,22 @@
         "title": "Better GUI",
         "description": "Better GUI is a resource pack that upgrades the GUI for Minecraft Java Edition!",
         "requirement": "Minecraft Java Edition",
-        "version": "Beta 1.2",
+        "version": "1.2",
         "version_req": "26.1",
         "link": "https://github.com/Gh053d413x/Better-GUI/releases/latest",
         "img": "assets/images/update/mcje-bgui/v1.2/title.png",
-        "tags": ["#new_update", "#now"],
+        "tags": ["#now"],
         "buttonText":"Download Java Resource Pack"
     },
     {
         "id": "proj-land.galactic-space-reborn",
         "title": "Galactic Space Reborn",
         "codename": "Project: Galaxy",
-        "description": "Galactic Space Reborn is an endless space shooter where you need to shoot enemies, collect powerups and dodge. You can use a Keyboard. Fight through bosses and enemies to get to the next level. Who can get the most points? ",
-        "version": "Dev Build 1.8",
+        "description": "Galactic Space Reborn is a fast-paced space shooter where you blast enemies, collect power-ups, and dodge obstacles. Fight through increasingly difficult levels and take down bosses to prove who can achieve the highest score.",
+        "version": "1.0-beta.1",
         "link": "https://github.com/Ghosted-Alex/Galactic_Space_Reborn",
         "img": "assets/images/update/gsr/galactic_space_reborn_cover.png",
-        "tags": ["#new_release", "#now"],
+        "tags": ["#new_update", "#now"],
         "buttonText": "Download Galactic Space Reborn"
     },
     {
