@@ -56,8 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         releasesElement.innerHTML = `<br>
                         <h1><code>Get Ready for NEW PROJECTS!</code></h1>
                         <h3>Future Projects and Leaks</h3>
-                        <hr class="no_limit">
-                        <img class="status" src="https://img.shields.io/badge/There_are_no_future_projects_and_leaks_currently,_please_come_back_later-red" style="width: 750px;">`;
+                        <hr class="no_limit">`;
                     }
                     
                     // if (futureAjacent) {
