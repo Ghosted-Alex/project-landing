@@ -1,11 +1,6 @@
 // VARUABLES
-<<<<<<< HEAD
 const version = "1.7"
 const update = "MAJOR"
-=======
-const version = "1.6.1"
-const update = "Minor"
->>>>>>> 52614dd (Minor website update on releases)
 
 const currentPage = window.location.pathname;
 
@@ -23,19 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-<<<<<<< HEAD
-    if (currentPage === "/project-landing/update.html" || currentPage === "/update.html")
     upd_str.innerText = update
-=======
-    upd_str.innerText = update
-
-    if (ver_str_labels.length > 0) {
-        for (let label of ver_str_labels) {
-            label.innerText = version;
-        }
-    }
-});
->>>>>>> 52614dd (Minor website update on releases)
 
     if (currentPage === "/project-landing/update.html" || currentPage === "/update.html"){
         if (ver_str_labels.length > 0) {
@@ -47,9 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-<<<<<<< HEAD
-
-=======
     if (currentPage === "/project-landing/index.html" || currentPage === "/project-landing/" || currentPage === "/index.html" || currentPage === "/"){
         // Helper functions to hide fields if value is "N/A"
         const renderValueField = (label, value) => {
@@ -153,5 +133,4 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .catch(err => console.error("Error loading project data:", err));
     }
->>>>>>> 52614dd (Minor website update on releases)
 });
