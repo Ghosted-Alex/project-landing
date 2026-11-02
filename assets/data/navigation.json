@@ -1,0 +1,39 @@
+[
+    {
+        "text": "Home",
+        "url": "index.html",
+        "align": "left"
+    },
+    {
+        "text": "Projects \u2193",
+        "align": "left",
+        "dropdown": [
+            {
+                "text": "Future Projects/Leaks",
+                "url": "index.html#future"
+            },
+            {
+                "text": "Newest Releases",
+                "url": "releases.html"
+            },
+            {
+                "text": "Current Projects",
+                "url": "index.html#now"
+            },
+            {
+                "text": "Past Projects",
+                "url": "past.html"
+            }
+        ]
+    },
+    {
+        "text": "Developer",
+        "url": "developer.html",
+        "align": "right"
+    },
+    {
+        "text": "Updates",
+        "url": "update.html",
+        "align": "right"
+    }
+]

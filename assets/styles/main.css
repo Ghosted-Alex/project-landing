@@ -7,10 +7,26 @@ Learn more about the MIT license at https://opensource.org/license/mit
 */
 
 body {
-    background-color: #1c1c1c;
+    background-color: #2d2d2d;
     color: #ffffff;
     font-family: pixel;
     margin: 0px;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+body.nav {
+    background-color: transparent;
+    color: #ffffff;
+    font-family: pixel;
+    margin: 0px;
+}
+
+#navbar-iframe {
+    background-color: transparent;
+    width: 100%;
+    border: none;
+    height: 100px;
 }
 
 footer {
@@ -39,10 +55,8 @@ footer {
     overflow-y: hidden;
 }
 
-footer .powered-by {
-    font-size: 0.8em;
-    color: #818181;
-    text-transform: lowercase;
+footer #links {
+    background-color: #1d1d1d;
 }
 
 /* Example logic to separate the legal block from the engine brand */
@@ -68,6 +82,7 @@ h1, h2, h3, h4, h5, h6, p {
     margin-top: 13px;
 }
 
+/* THIS BLOCK IS NO LONGER BEING USED FOR THE HOMEPAGE, IT IS NOW BEING USED ON THE RELEASES PAGE */
 #new_release {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -76,16 +91,18 @@ h1, h2, h3, h4, h5, h6, p {
     border-left: 5px solid #575757;
     border-top: 5px solid #575757;
     border-right: 5px solid #575757;
-    border-bottom: 1px solid #575757;
+    border-bottom: 5px solid #575757;
     background-color: #000000;
 }
+/* ––------------------------------------------------------------------------------------------------- */
+
 #new_update {
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     border-left: 5px solid #575757;
-    border-top: 1px solid #575757;
+    border-top: 5px solid #575757;
     border-right: 5px solid #575757;
     border-bottom: 5px solid #575757;
     background-color: #000000;
@@ -317,6 +334,10 @@ nav#navBar {
     width: 100%;
 } */
 
+#navbar-iframe {
+    position: fixed;
+}
+
 ul#nav_links {
     display: flex;
     justify-content: space-between;
@@ -327,11 +348,15 @@ ul#nav_links {
     list-style: none;
 }
 
+.navbar, #navBar {
+    background-color: transparent;
+}
+
 .version_banner {
     position: absolute;
     right: 0px;
     top: 100%; /* Positions it exactly at the bottom edge of the nav */
-    background-color: #a200d3;
+    background-color: #500068;
     padding: 2px 10px;
     border-radius: 0 0 0px 15px;
     color: white;
@@ -397,6 +422,10 @@ li a:hover#active{
 @font-face {
     font-family: press_start;
     src: url(../fonts/PressStart2P-Regular.ttf);
+}
+
+.navbar, #navBar, .dropdown-content, .dropbtn {
+    pointer-events: auto; /* Re-enables clicks for all interactive parts of the navbar */
 }
 
 .dropdown {
