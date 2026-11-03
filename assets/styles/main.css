@@ -7,12 +7,11 @@ Learn more about the MIT license at https://opensource.org/license/mit
 */
 
 body {
-    background-color: #2d2d2d;
+    background-color: #191722;
     color: #ffffff;
     font-family: pixel;
     margin: 0px;
     user-select: none;
-    -webkit-user-drag: none;
 }
 
 body.nav {
@@ -30,7 +29,7 @@ body.nav {
 }
 
 footer {
-    background-color: #000000;
+    background-color: #0a090e;
     color: #ffffff;
     font-family: press_start;
     margin: 0px;
@@ -56,7 +55,7 @@ footer {
 }
 
 footer #links {
-    background-color: #1d1d1d;
+    background-color: #16141C;
 }
 
 /* Example logic to separate the legal block from the engine brand */
@@ -92,20 +91,26 @@ h1, h2, h3, h4, h5, h6, p {
     border-top: 5px solid #575757;
     border-right: 5px solid #575757;
     border-bottom: 5px solid #575757;
-    background-color: #000000;
+    background-color: #110e17;
 }
 /* ––------------------------------------------------------------------------------------------------- */
 
 #new_update {
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     border-left: 5px solid #575757;
     border-top: 5px solid #575757;
     border-right: 5px solid #575757;
     border-bottom: 5px solid #575757;
-    background-color: #000000;
+    background-color: #110e17;
+}
+
+#now, #future, #past {
+    border-radius: 10px;
+    border: 5px solid #575757;
+    background-color: #110e17;
 }
 
 hr.subsection {
@@ -131,19 +136,33 @@ hr {
 }
 
 button {
-    background-color: #2d2d2d;
+    background-color: #433b5f;
     color: #ffffff;
-    border: none;
+    border: 2.5px solid #000000;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1em;
     font-family: press_start;
-    margin: 5px;
+    margin: 2.5px;
+}
+
+button:disabled {
+    background-color: #09070c;
+    color: #a6a6a6;
+    cursor: not-allowed;
 }
 
 button:hover {
-    background-color: #434343;
+    background-color: #5b5085;
+    border: 2.5px solid #ffffff;
+}
+
+button:hover:disabled {
+    background-color: #09070c;
+    border: 2.5px solid #000000;
+    color: #a6a6a6;
+    cursor: not-allowed;
 }
 
 .center {
@@ -160,7 +179,7 @@ button:hover {
 }
 
 code {
-    background-color: #2d2d2d;
+    background-color: #27213d;
     padding: 5px;
     font-family: press_start;
     color: #ffffff;
@@ -216,12 +235,6 @@ div.text {
 img.project_image {
     border-bottom-left-radius: 0px !important;
     border-bottom-right-radius: 0px !important;
-}
-
-#now, #future, #past {
-    border-radius: 10px;
-    border: 5px solid #575757;
-    background-color: #000000;
 }
 
 div.gallery {
@@ -315,7 +328,7 @@ div.buttons button a {
 }
 
 nav#navBar {
-    background-color: #a900d3;
+    background-color: #8200d3;
     position: fixed;
     top: 0;
     left: 0;
@@ -368,11 +381,21 @@ ul#nav_links {
 
 div.depth-effect{
     padding: 0px;
-    background-color: #6e0076;
+    background-color: #4d0076;
 }
 div.depth-effect-v2{
     padding: 0px;
-    background-color: #ad00ad;
+    background-color: #6800ad;
+}
+
+#developer {
+    border-top: 5px solid #4e4e4e;
+    border-bottom: 5px solid #4e4e4e;
+    width: 100%;
+    background-image: url("../images/developer_background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 a {
@@ -393,24 +416,26 @@ li a {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 9px 16px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     text-decoration: none;
 }
 li a:hover:not(#active) {
-    background-color: #d000ff;
+    background-color: #9900ff;
     cursor: pointer;
 }
 li a#active:hover:not(#active) {
-    background-color: #d000ff;
+    background-color: #a600ff;
     cursor: pointer;
 }
 
 li a#active {
-    background-color: #db00be;
+    background-color: #a800db;
     cursor: not-allowed;
 }
 li a:hover#active{
-    background-color: #ff44e6;
+    background-color: #c444ff;
     cursor: not-allowed;
 }
 
@@ -431,6 +456,8 @@ li a:hover#active{
 .dropdown {
     float: left;
     overflow: hidden;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 /* position: fixed;
 top: 0;
@@ -442,25 +469,25 @@ text-align: left; */
     border: none;
     outline: none;
     color: rgb(255, 255, 255);
-    padding: 14px 16px;
     background-color: inherit;
     font-family: inherit;
     margin: 0;
+    padding: 9px 8px;
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: rgb(238, 0, 255);
+    background-color: rgb(170, 0, 255);
 }
 
 .dropdown-content {
     display: none;
-    background-color: #9300ac;
+    background-color: #6400ac;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     position: fixed;
     margin-left: 85px;
-    margin-top: 48px;
+    margin-top: 44px;
     top: 0;
     left: 0;
     z-index: 1000;
@@ -521,6 +548,17 @@ text-align: left; */
     color: #899a39;
 }
 
+.color.pink {
+    color: #e173af;
+}
+
+.color.green:hover {
+    color: #c4da65;
+}
+
+.color.pink:hover {
+    color: #ffa7d7;
+}
 #developer {
     padding-top: 40px;
     padding-bottom: 10px;

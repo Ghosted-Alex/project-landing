@@ -1,6 +1,6 @@
 // VARUABLES
-const version = "1.7"
-const update = "MAJOR"
+const version = "1.7.1"
+const update = "MINOR"
 
 const currentPage = window.location.pathname;
 
